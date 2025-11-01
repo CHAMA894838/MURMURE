@@ -1,0 +1,37 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MURMURES</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>MURMURES</h1>
+        <p class="subtitle">Journal collectif de mots silencieux, pensées libres et rêves sans auteur</p>
+        <div class="button-group">
+            <a href="mur.html" class="button">🧱 Mur des murmures</a>
+            <a href="write.html" class="button">📝 Écrire un murmure</a>
+            <a href="read.html" class="button">🌸 Lire un murmure</a>
+        </div>
+        <div class="share-box">
+            <p class="share-text">💌 Partager Murmures</p>
+            <button onclick="copyLink()" class="button small">Copier le lien</button>
+            <p id="copied" style="display:none;">Lien copié !</p>
+        </div>
+    </div>
+    <script>
+        function copyLink() {
+            navigator.clipboard.writeText("https://murmure-xi.vercel.app")
+                .then(() => {
+                    document.getElementById('copied').style.display = 'block';
+                    setTimeout(() => {
+                        document.getElementById('copied').style.display = 'none';
+                    }, 2000);
+                });
+        }
+    </script>
+</body>
+</html>
