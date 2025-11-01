@@ -72,3 +72,10 @@ h1 {
     color: green;
     margin-top: 0.5em;
 }
+.murmure-icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
+  vertical-align: middle;
+  opacity: 0.7;
+}
