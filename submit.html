@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Écrire un murmure</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h2>Écrire un murmure</h2>
+    <form id="murmureForm">
+      <textarea id="murmure" placeholder="Écris ici ton murmure..." required maxlength="500"></textarea>
+      <select id="categorie">
+        <option value="">Catégorie (optionnelle)</option>
+        <option>🌒 Rêve</option>
+        <option>🌕 Prière</option>
+        <option>🌓 Pensée</option>
+        <option>🌑 Douleur</option>
+        <option>💫 Autre</option>
+      </select>
+      <button type="submit" class="btn">Soumettre</button>
+    </form>
+    <p id="message" class="message"></p>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
