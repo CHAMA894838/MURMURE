@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Écrire un murmure</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h2>Écris ton murmure</h2>
+    <textarea id="murmureInput" rows="5" cols="40" placeholder="Laisse ton mot, ton rêve ou ta prière..."></textarea><br/>
+    <button onclick="saveMurmure()">Soumettre</button>
+    <button onclick="location.href='index.html'">Retour</button>
+  </div>
+  <script>
+    function saveMurmure() {
+      const text = document.getElementById('murmureInput').value;
+      if (!text) return alert("Écris quelque chose");
+      const murmures = JSON.parse(localStorage.getItem('murmures') || '[]');
+      murmures.push({ text, date: new Date().toISOString() });
+      localStorage.setItem('murmures', JSON.stringify(murmures));
+      alert("Ton murmure est sauvegardé.");
+      document.getElementById('murmureInput').value = '';
+    }
+  </script>
+</body>
+</html>

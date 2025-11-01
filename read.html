@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Lire un murmure</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h2>Murmure aléatoire</h2>
+    <p id="murmureAffiche">🌙 ...</p>
+    <button onclick="afficherMurmure()">Lire un autre murmure</button>
+    <button onclick="location.href='index.html'">Retour</button>
+  </div>
+  <script>
+    function afficherMurmure() {
+      const murmures = JSON.parse(localStorage.getItem('murmures') || '[]');
+      if (murmures.length === 0) return document.getElementById('murmureAffiche').textContent = "Aucun murmure pour l'instant.";
+      const index = Math.floor(Math.random() * murmures.length);
+      document.getElementById('murmureAffiche').textContent = "🌙 " + murmures[index].text;
+    }
+    afficherMurmure();
+  </script>
+</body>
+</html>
