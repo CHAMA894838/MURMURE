@@ -25,7 +25,7 @@
       valides.forEach(m => {
         const div = document.createElement('div');
         div.className = 'murmur';
-        div.innerHTML = `<img src="murmure_picto.png" alt="picto murmure" class="murmure-picto"> ${m.text}`;
+        div.innerHTML = `<img src="murmure-iconp.png" class="murmure-icon" alt="💨"> ${m.text}`;
         murDiv.appendChild(div);
       });
       localStorage.setItem('murmures', JSON.stringify(valides)); // nettoyage auto
